@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Zimmerman — Controls Engineer</title>
+<meta name="description" content="Controls engineer working on precision motion, embedded systems, and robotics.">
+<style>
+  :root{
+    --bg: #10120f;
+    --panel: #171a16;
+    --panel-line: #2a2e26;
+    --ink: #e7e4d8;
+    --ink-dim: #9a9a8c;
+    --trace-amber: #ffb020;
+    --trace-cyan: #5fd0c8;
+    --mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+    --sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--trace-amber); text-decoration:none; border-bottom:1px solid rgba(255,176,32,0.35);}
+  a:hover{border-bottom-color:var(--trace-amber);}
+  .wrap{max-width:680px; margin:0 auto; padding:0 24px;}
+
+  header.hero{padding:88px 0 40px;}
+  .eyebrow{font-family:var(--mono); font-size:13px; color:var(--trace-cyan); margin:0 0 18px;}
+  h1{font-size:clamp(30px,5vw,44px); line-height:1.15; margin:0 0 10px; font-weight:600; letter-spacing:-0.01em;}
+  .title{color:var(--ink-dim); font-size:18px; margin:0 0 28px;}
+  .dek{color:var(--ink-dim); font-size:16px; max-width:56ch; margin:0 0 32px;}
+
+  .links{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:8px;}
+  .links a{
+    font-family:var(--mono); font-size:13px;
+    border:1px solid var(--panel-line);
+    border-bottom:1px solid var(--panel-line);
+    background:var(--panel);
+    padding:9px 14px;
+    color:var(--ink);
+  }
+  .links a:hover{border-color:var(--trace-amber); color:var(--trace-amber);}
+
+  section{padding:40px 0; border-top:1px solid var(--panel-line);}
+  h2{font-size:13px; font-family:var(--mono); color:var(--trace-cyan); text-transform:uppercase; letter-spacing:0.04em; margin:0 0 22px;}
+
+  .project{
+    display:block;
+    background:var(--panel);
+    border:1px solid var(--panel-line);
+    padding:20px 22px;
+    margin-bottom:16px;
+  }
+  .project:hover{border-color:var(--trace-amber);}
+  .project .name{font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px; border:none;}
+  .project .desc{color:var(--ink-dim); font-size:14px; border:none;}
+  .project .tag{font-family:var(--mono); font-size:11px; color:var(--trace-cyan); margin-top:10px; display:block;}
+
+  footer{padding:40px 0 80px; color:var(--ink-dim); font-size:13px; font-family:var(--mono);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">PORTLAND, OR</p>
+    <h1>Justin Zimmerman</h1>
+    <p class="title">Controls Engineer — Precision Motion &amp; Electromechanical Systems</p>
+    <p class="dek">12+ years designing and implementing software for advanced electromechanical equipment: multi-axis servo motion, machine vision, and embedded control for precision assembly and inspection. I build things that move accurately, then prove it with data.</p>
+
+    <div class="links">
+      <a href="mailto:justin@zimmland.com">Email</a>
+      <a href="https://github.com/jnzim" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/justinnzimmerman" target="_blank" rel="noopener">LinkedIn</a>
+      
+    </div>
+  </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <a class="project" href="./foc-servo/" >
+      <span class="name">Closing three loops on an AKM11E servo</span>
+      <span class="desc">A bare-metal STM32 field-oriented-control servo drive, designed and verified with frequency-domain system identification. Extended to a real ball-screw stage, with friction characterization and feedforward compensation, driven by motion commands from a Raspberry Pi host.</span>
+      <span class="tag">STM32 &middot; FOC &middot; System ID &middot; Bode/Frequency Response &middot; Raspberry Pi</span>
+    </a>
+
+    <a class="project" href="https://github.com/jnzim" target="_blank" rel="noopener">
+      <span class="name">Custom quadrotor flight-control platform</span>
+      <span class="desc">Full custom flight-control and communications hardware, embedded firmware, and nested attitude/rate control loops designed via system identification and state-space (LQR) methods, validated in real flight testing. Built for an M.S. thesis in mechanical engineering.</span>
+      <span class="tag">Sensor Fusion &middot; State-Space Control &middot; Embedded Firmware</span>
+    </a>
+  </section>
+
+  <section>
+    <h2>Background</h2>
+    <p style="color:var(--ink-dim); max-width:60ch;">
+      Staff Controls Engineer at DWFritz Automation, working on multi-axis servo motion, EtherCAT networks, machine vision, and embedded systems for precision production equipment. M.S. and B.S. in Mechanical Engineering from Portland State University.
+    </p>
+  </section>
+
+  <footer>
+    Built by hand. No frameworks were harmed.
+  </footer>
+
+</div>
+</body>
+</html>
